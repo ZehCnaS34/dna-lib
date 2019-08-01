@@ -1,18 +1,17 @@
 // @flow
 const { Node } = require("./node");
 
-
 function hasher(object: any) {
   let output = 0;
   let str = JSON.stringify(object);
   for (const c of str) {
-    output += c.charCodeAt(0)
+    output += c.charCodeAt(0);
   }
   return output;
 }
 
 class HashMap<K, V> {
-  _values: (Node<[K, V]>|null)[];
+  _values: (Node<[K, V]> | null)[];
 
   constructor(factor: number = 10) {
     this._values = new Array(factor).fill(null).map(() => null);
@@ -36,7 +35,7 @@ class HashMap<K, V> {
       if (k === key) {
         return v;
       }
-      node = node.next
+      node = node.next;
     }
     return null;
   }

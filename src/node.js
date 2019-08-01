@@ -1,6 +1,5 @@
 // @flow
 
-
 class Node<T> {
   _data: any;
   _next: Node<T> | null;
@@ -27,4 +26,4 @@ class Node<T> {
   }
 }
 
-export { Node }
+export { Node };

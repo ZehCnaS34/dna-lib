@@ -3,6 +3,7 @@ module.exports = (env, argv) => {
     mode: "development",
     entry: "./src/index.js",
     output: {
+      filename: "index.js",
       library: "dna",
       libraryTarget: "umd",
       globalObject: 'this',
